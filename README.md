@@ -1,4 +1,4 @@
-# Feel-It App
+# Feel-It: Mood Diary App
 
 ## What it feels like
 
@@ -33,7 +33,6 @@ Data needs to need a thrid party cloud sever of the users hooosing such as googl
 ## ClassDiagram
 
 [ClassDiagram.md](ClassDiagram.md)
-
 
 ```mermaid
 
