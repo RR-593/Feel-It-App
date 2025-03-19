@@ -29,3 +29,47 @@ Data needs to need a thrid party cloud sever of the users hooosing such as googl
 | FR06 | Each indvidual day must include all allocated entries                        |
 | FR07 | Feel boards consist of a year have a title and optional description          |
 | FR08 | Optin to lock entries s that after the day entries ccan noo longer be edited |
+
+## ClassDiagram
+
+[ClassDiagram.md](ClassDiagram.md)
+
+
+```mermaid
+
+---
+title: Feel-It:' Mood Diary
+---
+classDiagram
+    direction RL
+
+    Diary : Date year
+    Diary : String custom_title
+    Diary : Array ~Entry~ months
+    Diary : String year_summery
+    Diary : generate_summery()
+    Diary : generate_diary(Date year == Date current_year, String Title == "")
+
+    Entry : Date day_month_year
+    Entry : String optnl_descr
+    Entry : Array ~Mood~ assigned_moods
+    Entry : Boolean locked
+
+    Mood : int id
+    Mood : String name
+    Mood : String nickname
+    Mood : String optnl_descr
+    Mood : Array ~Rate~ Ratings
+
+    Rate : String name
+    Rate : Colour colour
+
+    Mood *-- Rate
+
+    Entry *-- Mood
+
+    Diary *-- Entry
+    
+
+    
+```
